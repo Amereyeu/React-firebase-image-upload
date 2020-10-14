@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import firebase from "firebase";
-import { app } from "./config";
+import { app } from "../config";
 
 const db = app.firestore();
 const storage = app.storage();

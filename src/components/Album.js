@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouteMatch, Link } from "react-router-dom";
 import Photo from "./Photo";
-import { app } from "./config";
+import { app } from "../config";
 
 const db = app.firestore();
 
@@ -33,8 +33,15 @@ const Album = () => {
           </p>
           <div className="d-flex flex-wrap mb-4">
             {images.map((image) => (
-              <div className="col-4 mb-4" key={image.name}>
+              <div className="col-4 card p-2" key={image.name}>
                 <img src={image.url} alt="album" className="img-fluid" />
+                <div class="card-body">
+                  <p>
+                    Fuga ducimus adipisci ex laboriosam fugiat id ullam
+                    voluptas, veritatis porro cum ipsam amet qui ipsa dolore
+                    reiciendis deleniti harum laudantium! Deserunt.
+                  </p>
+                </div>
               </div>
             ))}
           </div>

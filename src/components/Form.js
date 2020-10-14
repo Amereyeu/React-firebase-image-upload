@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { app } from "./config";
+import { app } from "../config";
 
 const db = app.firestore();
 

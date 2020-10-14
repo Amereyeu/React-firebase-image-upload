@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { app } from "./config";
-import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import Album from "./Album"
-import Home from "./Home"
+import Album from "./components/Album"
+import Home from "./components/Home"
 
 const db = app.firestore();
 
