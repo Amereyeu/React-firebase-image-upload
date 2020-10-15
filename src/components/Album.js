@@ -33,14 +33,16 @@ const Album = () => {
           </p>
           <div className="d-flex flex-wrap mb-4">
             {images.map((image) => (
-              <div className="col-4 card p-2" key={image.name}>
+              <div className="col-6 card p-2" key={image.name}>
                 <img src={image.url} alt="album" className="img-fluid" />
-                <div class="card-body">
-                  <p>
-                    Fuga ducimus adipisci ex laboriosam fugiat id ullam
-                    voluptas, veritatis porro cum ipsam amet qui ipsa dolore
-                    reiciendis deleniti harum laudantium! Deserunt.
-                  </p>
+                <div className="card-body">
+                  {image.title && image.title.length && <h3>{image.title}</h3>}
+
+                  {image.richText && image.richText.length && (
+                    <div
+                      dangerouslySetInnerHTML={{ __html: `${image.richText}` }}
+                    ></div>
+                  )}
                 </div>
               </div>
             ))}
